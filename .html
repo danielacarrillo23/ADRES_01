@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".css">
+    
+    
+
+</head>
+<body>
+    
+
+    <button id="btnBuscarOrden" class="boton-consultar">FILTROS</button> <!-- Corregido el ID del botón -->
+    <input type="text" id="inputBuscarOrden" placeholder="Buscar Orden"> <!-- Corregido el ID del input -->
+
+
+    <header>
+        <img src="IMAGENES/img-qué es Adres.png" class="image_header" alt="ADRES">
+
+        
+       
+    </header>
+    <nav> <!-- Menú interactivo -->
+        <ul>
+            <li><a href="#consulta">INICIO</a></li>
+            <li><a href="#consulta">CONSULTA</a></li>
+            <li><a href="#creacion">REGISTRAR</a></li>
+            <li><a href="#modificacionDesactivacion">MODIFICAR / DESACTIVAR</a></li>
+            <li><a href="#historialCambios">HISTORIAL</a></li>
+            <li><a href="#NOSOTROS">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <section id="Inicio">
+        <article class="ARTICLE4">
+            
+
+                <h1>Gestión de Adquisiciones</h1>
+                <p>Bienvenido a nuestra plataforma de gestión de adquisiciones. Aqui podras <br>
+                registrar, consultar, modificar y desactivar adquisiciones de bienes y servicios de manera eficiente.</p>
+            </article>
+    <div class="header-image">
+     <div class="contenedor">
+    
+        <img src="IMAGENES/adqui.webp">
+     </div>
+    </div>    
+
+    <section id="consulta">
+        <h2>Consulta tu orden</h2>
+        <input type="text" id="buscar" placeholder="Numero de orden">
+        <button id="btnBuscarConsulta">Buscar</button> <!-- Corregido el ID del botón -->
+        <div id="resultadosConsulta">
+            <!-- Los resultados de la consulta se mostrarán aquí -->
+        </div>
+    </section>
+    
+   
+    <section id="creacion">
+        <form id="formularioAdquisicion" class="formulario-cuadro" action="api.php" method="post">
+        <h2 id="tituloAdquisicion">Registrar Nueva Adquisición</h2>
+ 
+        <form id="formularioAdquisicion" class="formulario-cuadro" action="enviar_correo.php" method="post">
+            <div class="formulario-grupo">
+                <label for="presupuesto">Presupuesto:</label>
+                <input type="text" id="presupuesto" name="presupuesto" placeholder="Ingrese el presupuesto" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="unidad">Unidad:</label>
+                <input type="text" id="unidad" name="unidad" placeholder="Ingrese la unidad" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" placeholder="Ingrese el tipo" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="valorUnitario">Valor Unitario:</label>
+                <input type="text" id="valorUnitario" name="valorUnitario" placeholder="Ingrese el valor unitario" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="valorTotal">Valor Total:</label>
+                <input type="text" id="valorTotal" name="valorTotal" placeholder="Ingrese el valor total" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="proveedor">Proveedor:</label>
+                <input type="text" id="proveedor" name="proveedor" placeholder="Ingrese el proveedor" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="documentacion">Documentación:</label>
+                <input type="file" id="documentacion" name="documentacion" multiple accept=".pdf,.doc,.docx">
+                <small>Adjunta uno o varios documentos (PDF, Word).</small>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </section>
+    
+    <section id="modificacionDesactivacion">
+        
+        <h2 id="tituloModificar">Modificar o Desactivar Adquisiciones</h2>
+        <form id="formularioModificacion" class="formulario-cuadro">
+            <div class="formulario-grupo">
+                <label for="idAdquisicion">Numero de Orden:</label>
+                <input type="text" id="idAdquisicion" name="idAdquisicion" placeholder="Ingrese el Numero de Orden de la adquisición" required>
+            </div>
+            <div class="formulario-grupo">
+                <label for="campoModificar">Campo a Modificar:</label>
+                <select id="campoModificar" name="campoModificar">
+                    <option value="presupuesto">Presupuesto</option>
+                    <option value="unidad">Unidad</option>
+                    <option value="tipo">Tipo</option>
+                    <!-- Agrega más opciones según los campos que puedas modificar -->
+                </select>
+            </div>
+            <div class="formulario-grupo">
+                <label for="nuevoValor">Nuevo Valor:</label>
+                <input type="text" id="nuevoValor" name="nuevoValor" placeholder="Ingrese el nuevo valor">
+            </div>
+            <div class="formulario-grupo">
+                <label for="accion">Acción:</label>
+                <select id="accion" name="accion">
+                    <option value="modificar">Modificar</option>
+                    <option value="desactivar">Desactivar</option>
+                </select>
+            </div>
+            <button type="submit">Aplicar Cambios</button>
+        </form>
+    </section>
+    <section id="historialCambios">
+        <h2 id="tituloHistorial">Historial de Cambios</h2>
+        <table id="tablaHistorial" class="tabla-cambios">
+            <thead>
+                <tr>
+                    <th>ID de Adquisición</th>
+                    <th>Campo Modificado</th>
+                    <th>Valor Anterior</th>
+                    <th>Valor Nuevo</th>
+                    <th>Fecha de Modificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán dinámicamente las filas del historial de cambios -->
+            </tbody>
+        </table>
+    </section>
+    </section>
+   
+    <section id="contacto">
+        <h1>CONTACTO</h1>
+        <p>Tienes alguna duda, queja o reclamo?</p>
+        <div class="contacto-info">
+            <p>contáctanos en:</p>
+            <ul class="contacto-lista">
+                <li><a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a></li>
+                <li><a href="https://wa.me/XXXXXXXXXX"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/tupagina" target="_blank"><img src="IMAGENES/facebook.png" alt="Facebook" style="width: 50px;"></a>
+                <a href="https://twitter.com/tupagina" target="_blank"><img src="IMAGENES/x.png" alt="Twitter" style="width: 50px;"></a>
+                <a href="https://www.instagram.com/tupagina" target="_blank"><img src="IMAGENES/instagram.png" alt="Instagram" style="width: 50px;"></a>
+            
+        </div>
+    </section>
+    
+
+
+
+
+
+    <section id="filtros">    
+        <!-- Opciones de filtros y botones de aplicar/restablecer filtros -->
+    </section>
+      <div class="contenido">
+    <footer>
+        <p>Hecho por Daniela Carrillo</p>
+        <p>Recursos útiles: <a href="#">Guía de Usuario</a> | <a href="#">Preguntas Frecuentes</a></p>
+    </footer>
+    <script src=".java"></script>
+
+</body>
+</html>

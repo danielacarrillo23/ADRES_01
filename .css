@@ -1,0 +1,459 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la imagen principal */
+.image_header {
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+.header-text, .header-image {
+    flex: 1; /* Hace que ocupen la mitad del espacio */
+}
+
+
+.header-image {
+    display: flex;
+    justify-content: right; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    margin-top: -160px;
+    
+
+}
+
+.contenedor {
+  width: 450px; /* Ancho deseado */
+  height: 250px; /* Altura deseada */
+  overflow: hidden; /* Oculta cualquier contenido que exceda las dimensiones del contenedor */
+  align-items: center;
+}
+
+.imagen {
+  width: 300px; /* Ancho original de la imagen */
+  height: 300px; /* Altura original de la imagen */
+  margin-left: -50px; /* Ajusta este valor para recortar la imagen según sea necesario */
+}
+
+
+
+
+
+
+
+.ARTICLE4{
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    background-color: aqua;
+    opacity: 100%;
+    border-radius: 50px;
+    vertical-align: top;
+    
+  }
+
+
+
+
+header, footer {
+    background-color: #f1f6f6;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Hace que los elementos de la lista se muestren en línea */
+}
+
+nav ul li {
+    margin-right: 20px; /* Espacio entre elementos del menú */
+}
+
+
+
+nav ul li a:hover {
+    transform: scale(1.1); /* Hace que el elemento se agrande al 10% más grande */
+}
+
+
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    transition: transform 0.3s;
+    background-color: hwb(203 14% 28%); /* Color de fondo para todas las opciones del menú */
+}
+
+nav {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: #ecf0ef; /* Color de fondo del menú */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Muestra los elementos de la lista en línea */
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #eeeff4;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+
+footer a {
+    text-decoration: none;
+    color: #edf2f2;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+filtros
+
+
+.filtro-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4d3c98; /* Cambia el color de fondo a tu preferencia */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.boton-consultar {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+    border-radius: 50px;
+    background-color: aqua;
+    border: 3px solid rgb(50, 27, 132);
+    padding: 3px 7px;
+}
+
+
+
+
+
+.boton-buscar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 35px 10px 10px; /* Ajusta el padding para dar espacio al ícono */
+    background-color: transparent; /* Color de fondo transparente */
+    color: #333; /* Color del texto */
+    border: 2px solid #4CAF50; /* Borde sólido de color */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+}
+
+.boton-buscar i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+
+
+registro 
+
+.tituloAdquisicion {
+    text-align: center;
+    background-color: #d21010;
+}
+
+
+.formulario-cuadro {
+    background-color: #f3eded;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-grupo {
+    margin-bottom: 20px;
+}
+
+.formulario-grupo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formulario-grupo input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+modificar
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.formulario-cuadro {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.formulario-grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+HISTORILA CAMBIOS 
+
+.tabla-cambios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-cambios th, .tabla-cambios td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-cambios th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.tabla-cambios tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-cambios tr:hover {
+    background-color: #ddd;
+}
+
+
+CONTACTO
+
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#contacto {
+    background-image: url('IMAGENES/fondo\ adres.png');
+    background-size: 10000%; /* Para cubrir completamente el fondo */
+    background-position: center; /* Para centrar la imagen de fondo */
+    padding: 30px;
+    border-radius: 0px;
+    margin-top: 30px;
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea verticalmente el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+        width: 100%; /* Ajusta el ancho del contenedor */
+        max-width: 60000px; /* Ancho máximo del contenedor */
+        margin: auto; /* Centra horizontalmente el contenedor */
+        padding: 1px; /* Espacio interno del contenedor */
+    
+    
+}
+#contacto * {
+    color: #f0ecec; 
+}
+
+
+.contacto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+/* Estilos de los íconos de redes sociales */
+.redes-sociales a {
+    display: flex;
+    margin-right: 20px;
+    padding: 0px;
+    border-radius: 0%;
+    align-items: flex-start;
+    display: flex;
+    margin-top: 5px; /* O el margen que desees */
+    justify-content: flex-end;
+    display: flex;
+    justify-content: center; /* Alinea los elementos de las redes sociales horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+
+.redes-sociales a {
+    margin-left: 10px; /* Espacio entre las imágenes */
+}
+
+.redes-sociales a:first-child {
+    margin-left: 0; /* Elimina el margen a la izquierda del primer elemento */
+}
+
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente los íconos */
+    margin-top: 20px;
+}
+
+
+.redes-sociales a:last-child {
+    margin-right: 0; /* Elimina el margen a la derecha del último ícono */
+}
+
+
+.contenido {
+    color: rgb(0, 0, 0);
+}
+
+
+footer p a {
+    color: #2cbeef !important; /* Cambia este color por el que desees */
+}
+
+
+
+titulos 
+
+#tituloAdquisicion, #tituloModificar, #tituloHistorial {
+    text-align: center;
+    background-color: hwb(203 14% 28%); /* Color de fondo para los títulos */
+    color: white; /* Color del texto */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+
+/* Otros estilos */
+
+#tituloAdquisicion {
+    text-align: center;
+    background-color: hwb(203 14% 28%);
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px; /* Espacio interior */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Otros estilos */
